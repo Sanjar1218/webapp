@@ -13,18 +13,25 @@
    
     Telegram.WebApp.ready();
     Telegram.WebApp.MainButton.setText('SEND DATA TO BOT:').show().onClick(function () {
-        const text = document.getElementById('text').value;
-        const data = JSON.stringify({text: text});
+        // Get first name and last name
+        const firstName = document.getElementById('firstName').value;
+        const lastName = document.getElementById('lastName').value;
+
+        // Convert to JSON
+        const data = JSON.stringify({
+            first_name: firstName,
+            last_name: lastName
+        });
+
         Telegram.WebApp.sendData(data);
         Telegram.WebApp.close();
     });
 </script>
-<body style="background-color: #ffffff">
-    <h1>CODESCHOOL</h1>
-<!-- input text-->
-    <input type="text" id="text" placeholder="Type your message here...">
-    <!-- <button onclick="sendMessage()">Send</button> -->
+<form>
+    <input type="text" id="first" placeholder="first name">
+    <input type="text" id="last" placeholder="last name">
 
+</form>
 
 </body>
 <script type="text/javascript">
