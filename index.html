@@ -8,7 +8,8 @@
     <title>python-telegram-bot Example WebApp</title>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
  <!-- import style -->
-<link rel="stylesheet" href="style.css">
+ <script src="https://cdn.tailwindcss.com"></script>
+<!-- <link rel="stylesheet" href="style.css"> -->
 </head>
 <style>
     .form {
@@ -45,31 +46,18 @@
 </script>
 
 
-<div class="container">  
-    <form id="contact" action="" method="post">
-      <h3>Colorlib Contact Form</h3>
-      <h4>Contact us for custom quote</h4>
-      <fieldset>
-        <input id="firstName" placeholder="Your name" type="text" tabindex="1" required autofocus>
-      </fieldset>
-        <fieldset>
-            <input id="lastName" placeholder="Your last name" type="text" tabindex="2" required>
-        </fieldset>
+  <!-- ✅ Form Starts Here 👇 -->
+  <div class="p-10 shadow-lg bg-white">
+    
 
-      <fieldset>
-        <input id="" placeholder="Your Email Address" type="email" tabindex="2" required>
-      </fieldset>
 
-      <fieldset>
-        <input placeholder="Your Phone Number (optional)" type="tel" tabindex="3" required>
-      </fieldset>
-      <fieldset>
-        <input placeholder="Your Web Site (optional)" type="url" tabindex="4" required>
-      </fieldset>
-      <fieldset>
-        <textarea placeholder="Type your message here...." tabindex="5" required></textarea>
-      </fieldset>
-  
+    <form class="grid sm:grid-cols-1 gap-10">
+      
+      <input type="text" name="firstName" id="firstName" class="border-b border-gray-300 py-2 pl-2" placeholder="Full Name" />
+      <input type="text" name="lastName" id="lastName" class="border-b border-gray-300 py-2 pl-2" placeholder="Last Name" />
+      <input type="email" name="email" id="email" class="border-b border-gray-300 py-2 pl-2" placeholder="Email" />
+
+
      
     </form>
   </div>
