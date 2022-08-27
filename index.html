@@ -33,21 +33,36 @@
 </script>
 
 
-  <!-- ✅ Form Starts Here 👇 -->
-  <div class="p-10 shadow-lg bg-white">
-    
+<div class="container">
 
+	<div class="form-title">Form Floating Label</div>
 
-    <form class="grid sm:grid-cols-1 gap-10">
-      
-      <input type="text" name="firstName" id="firstName" class="border-b border-gray-300 py-2 pl-2" placeholder="Full Name" />
-      <input type="text" name="lastName" id="lastName" class="border-b border-gray-300 py-2 pl-2" placeholder="Last Name" />
-      <input type="email" name="email" id="email" class="border-b border-gray-300 py-2 pl-2" placeholder="Email" />
+	<div class="form-floating">
+		<input type="text" placeholder=" ">
+		<label>Name</label>
+	</div>
 
+	<div class="form-floating">
+		<input type="mail" placeholder=" ">
+		<label>Mail</label>
+	</div>
 
-     
-    </form>
-  </div>
+	<div class="form-floating">
+		<select>
+			<option>Yes</option>
+			<option>No</option>
+		</select>
+		<label>Subscription</label>
+	</div>
+
+	<div class="form-floating">
+		<textarea placeholder=" "></textarea>
+		<label>Comment</label>
+	</div>
+
+	<button class="btn btn__dark">Send</button>
+
+</div>
 
 </body>
 <script type="text/javascript">
