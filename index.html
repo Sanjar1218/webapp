@@ -5,9 +5,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
     <title>python-telegram-bot Example WebApp</title>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
  <!-- import style -->
+<!-- import style from file -->
 <link rel="stylesheet" href="style.css">
 </head>
 
@@ -32,11 +34,35 @@
 </script>
 
 
-<div class="container">  
-  <label for="firstname">First Name</label>
-  <input type="text" id="firstname" placeholder="Your fisrt name..." name="firstname">
-  <label for="lastname">Last Name</label>
-  <input type="text" id="lastname" placeholder="Your last name...">
+<div class="container">
+
+	<div class="form-title">Form Floating Label</div>
+
+	<div class="form-floating">
+		<input type="text" placeholder=" ">
+		<label>Name</label>
+	</div>
+
+	<div class="form-floating">
+		<input type="mail" placeholder=" ">
+		<label>Mail</label>
+	</div>
+
+	<div class="form-floating">
+		<select>
+			<option>Yes</option>
+			<option>No</option>
+		</select>
+		<label>Subscription</label>
+	</div>
+
+	<div class="form-floating">
+		<textarea placeholder=" "></textarea>
+		<label>Comment</label>
+	</div>
+
+	<button class="btn btn__dark">Send</button>
+
 </div>
 
 </body>
