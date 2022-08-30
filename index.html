@@ -21,11 +21,17 @@
         // Get first name and last name
         const firstName = document.getElementById('firstName').value;
         const lastName = document.getElementById('lastName').value;
+        const mail = document.getElementById('mail').value;
+		const comment = document.getElementsByTagName('textarea').value
+		const s = document.getElementById('choose')
 
         // Convert to JSON
         const data = JSON.stringify({
             first_name: firstName,
-            last_name: lastName
+			last_name: lastName,
+            email: mail,
+			comment: comment,
+			option: s.options[s.selectedIndex].text
         });
 
         Telegram.WebApp.sendData(data);
@@ -40,20 +46,26 @@
 
 	<div class="form-floating">
 		<input type="text" id="firstName" placeholder=" ">
-		<label>Name</label>
+		<label>firstName</label>
+	</div>
+	<div class="form-floating">
+		<input type="text" id="lastName" placeholder=" ">
+		<label>lastName</label>
 	</div>
 
 	<div class="form-floating">
-		<input type="mail" placeholder=" " id="lastName">
+		<input type="mail" placeholder=" " id="mail">
 		<label>Mail</label>
 	</div>
 
 	<div class="form-floating">
-		<select>
-			<option>Yes</option>
-			<option>No</option>
+		<select id="choose">
+			<option>Sun’iy intillekt "AI" (Computer vision).</option>
+			<option>Xalqaro dasturlash olimpiadalariga tayyorlash (Competitive programming).</option>
+			<option>Dart tili va "Flutter" (Mobile and web).</option>
+			<option>Python tili va "Django" (Backend).</option>
 		</select>
-		<label>Subscription</label>
+		<label>Bizning markazda quyidagi yo'nalishlarda tahsil olishingiz mumkin:</label>
 	</div>
 
 	<div class="form-floating">
